@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Марсоход Curiosity</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Марсоход Curiosity</h1>
+
+    <section>
+        <h2>Фото дня</h2>
+        <div id="apod-result" class="results">
+            <p class="loading">Загрузка фото дня...</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Фото марсохода</h2>
+        <form id="rover-form">
+            <div class="form-group">
+                <label for="sol">Sol (Марсианский день):</label>
+                <input type="number" id="sol" placeholder="Введите Sol" required min="0">
+            </div>
+            <div class="form-group">
+                <label for="camera">Камера:</label>
+                <select id="camera" required>
+                    <option value="fhaz">Передняя камера предотвращения опасностей</option>
+                    <option value="rhaz">Задняя камера предотвращения аварий</option>
+                    <option value="mast">Мачтовая камера</option>
+                    <option value="chemcam">Химический и фотокомплекс</option>
+                    <option value="mahli">Ручной объектив-визуализатор</option>
+                    <option value="mardi">Спусковой тепловизор</option>
+                    <option value="navcam">Навигационная камера</option>
+                </select>
+            </div>
+            <button type="submit">Получить фото марсохода</button>
+        </form>
+        <div id="rover-result" class="results"></div>
+    </section>
+
+    <button id="theme-toggle" class="theme-toggle" aria-label="Сменить тему"></button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
